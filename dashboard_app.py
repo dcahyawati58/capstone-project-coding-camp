@@ -672,9 +672,6 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
     
-    st.image("dicoding-header-logo.png", width=180)
-    st.image("1729482329489.jpg", width=170)
-    
     st.markdown("---")
     st.caption(f"Dataset: {len(df_users):,} user · {len(df_tx):,} transaksi")
     st.caption(f"Periode: {df_tx['date'].min().strftime('%b %Y')} – {df_tx['date'].max().strftime('%b %Y')}")
