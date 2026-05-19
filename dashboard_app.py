@@ -619,8 +619,62 @@ with st.sidebar:
         "📖 Data Dictionary",
     ])
     st.markdown("---")
-    st.markdown("**Tim CC26-PSU268**")
-    st.markdown("Coding Camp 2026 · DBS Foundation")
+    
+    # ==========================================
+    # TEAM SECTION
+    # ==========================================
+    
+    st.markdown("""
+    <div style="
+        background: rgba(255,255,255,0.06);
+        padding: 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.08);
+    ">
+    
+    <h4 style="color:white; margin-bottom:6px;">
+    👥 Tim CC26-PSU268
+    </h4>
+    
+    <p style="color:#cbd5e1; font-size:13px; margin-top:0;">
+    Coding Camp 2026 · DBS Foundation
+    </p>
+    
+    <hr style="border:0.5px solid rgba(255,255,255,0.1)">
+    
+    <p style="color:white; font-size:14px; margin-bottom:6px;">
+    <b>🧠 Data Science</b>
+    </p>
+    
+    <ul style="color:#cbd5e1; font-size:13px;">
+    <li>Dwi Cahyawati</li>
+    <li>Mutia Saniya Rahma</li>
+    </ul>
+    
+    <p style="color:white; font-size:14px; margin-bottom:6px;">
+    <b>🤖 AI Engineer</b>
+    </p>
+    
+    <ul style="color:#cbd5e1; font-size:13px;">
+    <li>Aliya Shahira</li>
+    <li>Khalisha Rana Putri</li>
+    </ul>
+    
+    <p style="color:white; font-size:14px; margin-bottom:6px;">
+    <b>💻 Full-Stack Web Developer</b>
+    </p>
+    
+    <ul style="color:#cbd5e1; font-size:13px;">
+    <li>Hamzah Hudzairah</li>
+    <li>Berton Adiwidya Wibowo</li>
+    </ul>
+    
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.image("dicoding-header-logo.png", width=180)
+    st.image("1729482329489.jpg", width=170)
+    
     st.markdown("---")
     st.caption(f"Dataset: {len(df_users):,} user · {len(df_tx):,} transaksi")
     st.caption(f"Periode: {df_tx['date'].min().strftime('%b %Y')} – {df_tx['date'].max().strftime('%b %Y')}")
