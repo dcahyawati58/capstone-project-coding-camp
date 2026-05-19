@@ -1259,7 +1259,37 @@ elif menu == "🔎 User Deep Dive":
     if u_tx.empty:
         st.warning(f"Tidak ada transaksi untuk {selected_uid} di rentang tanggal yang dipilih.")
         st.stop()
-
+    # ==========================================
+    # TABEL TRANSAKSI USER
+    # ==========================================
+    if show_raw:
+    
+        st.markdown("### 📋 Tabel Transaksi Pengguna")
+    
+        u_tx_display = u_tx.copy()
+    
+        if 'date' in u_tx_display.columns:
+            u_tx_display['date'] = u_tx_display['date'].dt.strftime('%Y-%m-%d %H:%M')
+    
+        cols_show = [
+            'txn_id',
+            'date',
+            'category',
+            'amount',
+            'payment_method'
+        ]
+    
+        cols_show = [c for c in cols_show if c in u_tx_display.columns]
+    
+        st.dataframe(
+            u_tx_display[cols_show].sort_values(
+                by='date',
+                ascending=False
+            ),
+            use_container_width=True,
+            height=350
+        )
+    
     # Profile dari user_features (sudah computed)
     u_profile = user_features[user_features['user_id'] == selected_uid]
     u_demo    = df_users[df_users['user_id'] == selected_uid]
