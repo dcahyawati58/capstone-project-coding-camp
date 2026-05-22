@@ -35,223 +35,290 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
-    
+
     /* ── Base typography ── */
     html, body, [class*="css"] {
         font-family: 'DM Sans', sans-serif;
     }
-    h1, h2, h3, h4, h5, h6,
-    [data-testid="stSidebar"] h1,
-    [data-testid="stSidebar"] h2,
-    [data-testid="stSidebar"] h3 {
+    
+    h1, h2, h3, h4, h5, h6 {
         font-family: 'Sora', sans-serif !important;
     }
-
+    
     /* ── Page background ── */
-    .main { background-color: #fff7ed; }
-    .block-container { padding: 1.5rem 2rem; }
-
+    .main {
+        background-color: #FFF6DE;
+    }
+    
+    .block-container {
+        padding: 1.5rem 2rem;
+    }
+    
     /* ── Sidebar ── */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1c0a00 0%, #7c2d12 100%);
+        background: linear-gradient(
+            180deg,
+            #D97B57 0%,
+            #F48F68 100%
+        );
     }
+    
     [data-testid="stSidebar"] .stRadio label {
-        color: #fed7aa !important;
+        color: #FFF6DE !important;
         font-weight: 500;
         font-family: 'DM Sans', sans-serif;
     }
+    
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3,
     [data-testid="stSidebar"] p {
-        color: #ffedd5 !important;
+        color: white !important;
         text-align: center;
     }
-    [data-testid="stSidebar"] .stMarkdown { color: #fdba74; text-align: center; }
-
-    /* ── Sidebar BUDU brand ── */
+    
+    [data-testid="stSidebar"] .stMarkdown {
+        color: #FFF6DE;
+        text-align: center;
+    }
+    
+    /* ── Sidebar BUDU Brand ── */
     [data-testid="stSidebar"] .stMarkdown h2 {
         font-family: 'Sora', sans-serif !important;
         font-size: 1.8rem !important;
         font-weight: 800 !important;
         letter-spacing: -0.5px;
-        color: #fff !important;
+        color: white !important;
         text-align: center;
     }
-    [data-testid="stSidebar"] .stMarkdown p {
-        text-align: center;
-    }
-
-    /* ── Metric cards ── */
+    
+    /* ── Metric Cards ── */
     [data-testid="metric-container"] {
         background: white;
-        border-radius: 14px;
-        padding: 16px 20px;
-        border: 1px solid #fed7aa;
-        box-shadow: 0 1px 8px rgba(234,88,12,0.07);
-        transition: box-shadow 0.2s;
+        border-radius: 16px;
+        padding: 18px 22px;
+        border: 1px solid #FFE394;
+        box-shadow: 0 1px 10px rgba(244,143,104,0.10);
+        transition: all 0.2s ease;
     }
+    
     [data-testid="metric-container"]:hover {
-        box-shadow: 0 4px 20px rgba(234,88,12,0.15);
+        box-shadow: 0 4px 20px rgba(244,143,104,0.18);
+        transform: translateY(-2px);
     }
+    
     [data-testid="stMetricValue"] {
         font-weight: 700;
-        color: #9a3412;
+        color: #8C5A44;
         font-family: 'Inter', sans-serif;
-        font-size: 2rem;
+        font-size: 1.9rem;
         line-height: 1.1;
         letter-spacing: -1px;
         white-space: nowrap;
     }
+    
     [data-testid="stMetricLabel"] {
-        color: #92400e;
+        color: #A56A4F;
         font-weight: 600;
         font-size: 0.82rem;
     }
-
-    /* ── Section title ── */
+    
+    /* ── Section Title ── */
     .section-title {
         font-size: 1.15rem;
         font-weight: 700;
-        color: #9a3412;
-        font-family: 'Syne', sans-serif;
+        color: #8C5A44;
+        font-family: 'Sora', sans-serif;
         margin-bottom: 0.5rem;
         padding-left: 10px;
-        border-left: 4px solid #ea580c;
+        border-left: 4px solid #F48F68;
     }
-
-    /* ── Persona cards ── */
+    
+    /* ── Persona Card ── */
     .persona-card {
         border-radius: 14px;
         padding: 18px 16px;
         margin-bottom: 8px;
         transition: transform 0.15s;
+        background: white;
     }
-    .persona-card:hover { transform: translateY(-2px); }
-
-    /* ── Info boxes ── */
+    
+    .persona-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* ── Insight Box ── */
     .insight-box {
-        background: linear-gradient(135deg, #fff7ed, #ffedd5);
-        border-left: 4px solid #ea580c;
-        border-radius: 10px;
+        background: linear-gradient(
+            135deg,
+            #FFF8EE,
+            #FFE8D9
+        );
+        border-left: 4px solid #F48F68;
+        border-radius: 12px;
         padding: 14px 18px;
         margin: 10px 0;
-        color: #9a3412;
+        color: #8C5A44;
         font-weight: 500;
     }
+    
+    /* ── Warning Box ── */
     .warn-box {
-        background: linear-gradient(135deg, #fff7ed, #ffedd5);
-        border-left: 4px solid #f59e0b;
-        border-radius: 10px;
+        background: linear-gradient(
+            135deg,
+            #FFF6DE,
+            #FFE9B8
+        );
+        border-left: 4px solid #FFE394;
+        border-radius: 12px;
         padding: 14px 18px;
         margin: 10px 0;
-        color: #92400e;
+        color: #8C5A44;
         font-weight: 500;
     }
+    
+    /* ── Success Box ── */
     .success-box {
-        background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-        border-left: 4px solid #10b981;
-        border-radius: 10px;
+        background: linear-gradient(
+            135deg,
+            #E8FAF9,
+            #D4F4F2
+        );
+        border-left: 4px solid #8BDFDD;
+        border-radius: 12px;
         padding: 14px 18px;
         margin: 10px 0;
-        color: #065f46;
+        color: #4E6E6D;
         font-weight: 500;
     }
+    
+    /* ── Danger Box ── */
     .danger-box {
-        background: linear-gradient(135deg, #fef2f2, #fee2e2);
-        border-left: 4px solid #ef4444;
-        border-radius: 10px;
+        background: linear-gradient(
+            135deg,
+            #FFF0EC,
+            #FFD8CC
+        );
+        border-left: 4px solid #F48F68;
+        border-radius: 12px;
         padding: 14px 18px;
         margin: 10px 0;
-        color: #991b1b;
+        color: #8C5A44;
         font-weight: 500;
     }
-
-    /* ── User profile card ── */
+    
+    /* ── User Profile Card ── */
     .user-profile-card {
         background: white;
-        border-radius: 18px;
+        border-radius: 20px;
         padding: 24px;
-        border: 1px solid #fed7aa;
-        box-shadow: 0 4px 24px rgba(234,88,12,0.08);
+        border: 1px solid #FFE394;
+        box-shadow: 0 4px 24px rgba(244,143,104,0.12);
         margin-bottom: 16px;
     }
+    
+    /* ── User Name ── */
+    .user-profile-name {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #8C5A44;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+    }
+    
+    /* ── User Badge ── */
     .user-stat-badge {
         display: inline-block;
-        background: #fff7ed;
-        color: #ea580c;
-        border-radius: 8px;
-        padding: 4px 12px;
+        background: #FFF6DE;
+        color: #F48F68;
+        border-radius: 10px;
+        padding: 5px 12px;
         font-size: 0.82rem;
         font-weight: 600;
         margin: 3px 3px;
     }
-
+    
     /* ── Tabs ── */
     .stTabs [data-baseweb="tab-list"] {
         gap: 6px;
-        background: #fff7ed;
+        background: #FFF6DE;
         border-radius: 12px;
         padding: 6px;
     }
+    
     .stTabs [data-baseweb="tab"] {
         border-radius: 8px;
         font-weight: 600;
         font-family: 'DM Sans', sans-serif;
         font-size: 0.88rem;
         letter-spacing: 0.01em;
-        color: #78350f;
+        color: #8C5A44;
         padding: 8px 14px;
         white-space: nowrap;
         background: transparent;
         border: none;
     }
+    
     .stTabs [aria-selected="true"] {
-        color: #fff !important;
-        background: #ea580c !important;
+        color: white !important;
+        background: #F48F68 !important;
         border-radius: 8px;
     }
-
+    
     /* ── Expander ── */
     .streamlit-expanderHeader {
         font-weight: 600;
-        color: #9a3412;
-        font-family: 'Syne', sans-serif;
+        color: #8C5A44;
+        font-family: 'Sora', sans-serif;
     }
-
-    hr { border-color: #fed7aa; margin: 1.2rem 0; }
-
-    /* ── Header banner ── */
+    
+    /* ── Divider ── */
+    hr {
+        border-color: #FFE394;
+        margin: 1.2rem 0;
+    }
+    
+    /* ── Header Banner ── */
     .header-banner {
-        background: linear-gradient(135deg, #7c2d12 0%, #ea580c 55%, #f97316 100%);
-        border-radius: 18px;
-        padding: 28px 36px;
+        background: linear-gradient(
+            135deg,
+            #F48F68 0%,
+            #F7B7A3 55%,
+            #FFD6B8 100%
+        );
+        border-radius: 20px;
+        padding: 30px 36px;
         margin-bottom: 24px;
         color: white;
     }
+    
     .header-banner h1 {
         color: white;
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 800;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
         font-family: 'Sora', sans-serif;
         line-height: 1.15;
         letter-spacing: -1px;
     }
+    
     .header-banner p {
-        color: #fed7aa;
+        color: #FFF6DE;
         font-size: 0.95rem;
         margin: 0;
     }
-
+    
+    /* ── Gauge Label ── */
     .gauge-label {
         font-size: 0.78rem;
-        color: #92400e;
+        color: #8C5A44;
         text-align: center;
         margin-top: 4px;
     }
-</style>
-""", unsafe_allow_html=True)
+    
+    </style>
+    """, unsafe_allow_html=True)
 
 # ==========================================
 # CONSTANTS
@@ -262,8 +329,8 @@ ANOMALY_STD_FACTOR   = 1.5
 SMALL_TXN_MULTIPLIER = 0.5
 FREQ_MONTH_THRESH    = 10
 IMPULSE_THRESHOLD    = 0.55
-PRIMARY, ACCENT, WARN = '#EA580C', '#10B981', '#EF4444'
-PALETTE = ['#EA580C','#F97316','#FB923C','#10B981','#F59E0B','#EF4444','#8B5CF6','#06B6D4']
+PRIMARY, ACCENT, WARN = '#F48F68', '#8BDFDD', '#EF4444'
+PALETTE = [ '#F48F68', '#8BDFDD', '#FFE394', '#F7B7A3', '#FFD6B8', '#A8E6E3', '#F6CFC2', '#E9C46A']
 
 np.random.seed(RANDOM_SEED)
 
