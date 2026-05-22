@@ -56,11 +56,7 @@ st.markdown("""
     
     /* ── Sidebar ── */
     [data-testid="stSidebar"] {
-        background: linear-gradient(
-            180deg,
-            #D97B57 0%,
-            #F48F68 100%
-        );
+        background: #E89B7A;
     }
     
     [data-testid="stSidebar"] .stRadio label {
