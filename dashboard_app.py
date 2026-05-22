@@ -1014,7 +1014,7 @@ elif menu == "📊 EDA & Business Questions":
     ])
 
     with tabs[0]:
-        st.markdown("#### 💰 Q1: Kategori mana yang menyumbang ≥30% total pengeluaran?")
+        st.markdown("#### Q1: Kategori mana yang menyumbang ≥30% total pengeluaran?")
         st.markdown('<div class="insight-box">📌 Tujuan: Identifikasi kategori utama penyumbang spending untuk fitur <b>Money Leak Warning</b> BUDU.</div>', unsafe_allow_html=True)
         cat_spend = df_f.groupby('category')['amount'].sum().sort_values(ascending=False).reset_index()
         cat_spend['pct']            = cat_spend['amount'] / cat_spend['amount'].sum() * 100
@@ -1043,7 +1043,7 @@ elif menu == "📊 EDA & Business Questions":
             st.markdown(f'<div class="warn-box">⚠️ 2 kategori teratas menyumbang <b>{top2_pct:.1f}%</b> total spending.</div>', unsafe_allow_html=True)
 
     with tabs[1]:
-        st.markdown("#### 📅 Q2: Apakah rata-rata transaksi weekend ≥20% lebih tinggi dari weekday?")
+        st.markdown("#### Q2: Apakah rata-rata transaksi weekend ≥20% lebih tinggi dari weekday?")
         wknd = df_f.groupby('is_weekend')['amount'].agg(['mean','median','count','sum']).reset_index()
         wknd['label'] = wknd['is_weekend'].map({0:'Weekday', 1:'Weekend'})
         avg_wknd = wknd.loc[wknd['is_weekend']==1,'mean'].values[0]
@@ -1074,7 +1074,7 @@ elif menu == "📊 EDA & Business Questions":
             st.markdown(f'<div class="warn-box">⚠️ Weekend <b>{diff_pct:.1f}%</b> lebih tinggi. BUDU aktifkan notifikasi Jumat malam.</div>', unsafe_allow_html=True)
 
     with tabs[2]:
-        st.markdown("#### 📈 Q3: Bulan apa total pengeluaran melebihi mean + 1.5×SD?")
+        st.markdown("#### Q3: Bulan apa total pengeluaran melebihi mean + 1.5×SD?")
         monthly = df_f.groupby('month')['amount'].agg(total='sum', count='count', avg='mean').reset_index()
         thr      = monthly['total'].mean() + ANOMALY_STD_FACTOR * monthly['total'].std()
         monthly['anomaly'] = monthly['total'] > thr
@@ -1103,7 +1103,7 @@ elif menu == "📊 EDA & Business Questions":
             st.markdown(f'<div class="warn-box">⚠️ Bulan anomali: <b>{", ".join(anom_names)}</b> | Threshold: Rp {thr/1e6:.1f} juta/bulan</div>', unsafe_allow_html=True)
 
     with tabs[3]:
-        st.markdown("#### 🚰 Q4: Kategori mana yang bocor diam-diam (transaksi kecil, frekuensi tinggi)?")
+        st.markdown("#### Q4: Kategori mana yang bocor diam-diam (transaksi kecil, frekuensi tinggi)?")
         median_amt = df_f['amount'].median()
         small_lim  = median_amt * SMALL_TXN_MULTIPLIER
         df_small   = df_f[df_f['amount'] <= small_lim]
@@ -1132,7 +1132,7 @@ elif menu == "📊 EDA & Business Questions":
         st.markdown(f'<div class="warn-box">⚠️ Batas transaksi "kecil": ≤ Rp {small_lim:,.0f} | Total bocor: <b>Rp {df_small["amount"].sum()/1e9:.2f}M IDR</b></div>', unsafe_allow_html=True)
 
     with tabs[4]:
-        st.markdown("#### 💳 Q5: Apakah metode pembayaran berkorelasi dengan nilai transaksi? (Spearman ρ ≥ 0.3)")
+        st.markdown("#### Q5: Apakah metode pembayaran berkorelasi dengan nilai transaksi? (Spearman ρ ≥ 0.3)")
         pay = (df_f.groupby('payment_method')['amount']
                .agg(total='sum', count='count', avg='mean')
                .sort_values('total', ascending=False).reset_index())
@@ -1161,7 +1161,7 @@ elif menu == "📊 EDA & Business Questions":
             st.markdown(f'<div class="warn-box">ℹ️ Korelasi lemah (ρ = {rho:.2f} < 0.3).</div>', unsafe_allow_html=True)
 
     with tabs[5]:
-        st.markdown(f"#### ⚡ Q6: Berapa proporsi user dengan impulse_score ≥ {IMPULSE_THRESHOLD}?")
+        st.markdown(f"#### Q6: Berapa proporsi user dengan impulse_score ≥ {IMPULSE_THRESHOLD}?")
         n_imp  = (uf_f['impulse_score'] >= IMPULSE_THRESHOLD).sum()
         n_tot  = len(uf_f)
         st.markdown(f'<div class="warn-box">📌 Q6 Answer: <b>{n_imp}/{n_tot} pengguna = {n_imp/n_tot*100:.1f}%</b> Impulsive Spender</div>', unsafe_allow_html=True)
@@ -1207,7 +1207,7 @@ elif menu == "📊 EDA & Business Questions":
 # ██  A/B TESTING  ██
 # ==========================================
 elif menu == "🧪 A/B Testing":
-    st.subheader("🧪 A/B Test: Weekend vs Weekday Spending")
+    st.subheader("A/B Test: Weekend vs Weekday Spending")
     st.markdown("Menggunakan **Mann-Whitney U Test** (non-parametric). H0: tidak ada perbedaan. H1: pengeluaran weekend ≥20% lebih tinggi.")
 
     grp_w = df_f[df_f['is_weekend'] == 1]['amount']
@@ -1270,7 +1270,7 @@ elif menu == "🧪 A/B Testing":
 # ██  CLUSTERING & PERSONA  ██
 # ==========================================
 elif menu == "👥 Clustering & Persona":
-    st.subheader("👥 Spending Persona — K-Means Clustering")
+    st.subheader("Spending Persona — K-Means Clustering")
     st.markdown("Replikasi Cell 22–23 notebook: Elbow Method + Silhouette + PCA Visualization. K final = 3.")
 
     persona_desc = {
@@ -1371,7 +1371,7 @@ elif menu == "👥 Clustering & Persona":
 # ██  USER DEEP DIVE  ██
 # ==========================================
 elif menu == "🔎 User Deep Dive":
-    st.subheader("🔎 User Deep Dive — Analisis Per Pengguna")
+    st.subheader("User Deep Dive — Analisis Per Pengguna")
     st.markdown("Pilih satu pengguna untuk melihat profil lengkap: demografi, pola spending, kategori favorit, tren waktu, dan persona spending mereka.")
 
     col_filter1, col_filter2, col_filter3 = st.columns([2, 2, 1])
@@ -1812,7 +1812,7 @@ elif menu == "🔎 User Deep Dive":
 # ██  DATA DICTIONARY  ██
 # ==========================================
 elif menu == "📖 Data Dictionary":
-    st.subheader("📖 Data Dictionary — BUDU Dataset")
+    st.subheader("Data Dictionary — BUDU Dataset")
 
     tab_d = st.tabs([
         "📊  Segmen Sosio-Ekonomi",
