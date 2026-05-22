@@ -74,7 +74,7 @@ st.markdown("""
     }
     
     [data-testid="stSidebar"] .stMarkdown {
-        color: #FFF6DE;
+        color:  #FFF6DE;
         text-align: center;
     }
     
