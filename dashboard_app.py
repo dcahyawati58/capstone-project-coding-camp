@@ -823,40 +823,140 @@ with st.sidebar:
 
     st.markdown("""
     <div style="
-        background: rgba(255,255,255,0.06);
-        padding: 16px;
-        border-radius: 14px;
-        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.10);
+        padding: 24px 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.15);
         text-align: center;
+        backdrop-filter: blur(6px);
     ">
-    <h4 style="color:white; margin-bottom:6px; font-family:'Syne',sans-serif; text-align:center;">
+    
+    <h3 style="
+        color: white;
+        margin-bottom: 6px;
+        font-family: 'Sora', sans-serif;
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    ">
     Tim CC26-PSU268
-    </h4>
-    <p style="color:#fed7aa; font-size:13px; margin-top:0; text-align:center;">
+    </h3>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 13px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 500;
+    ">
     Coding Camp 2026 · DBS Foundation
     </p>
-    <hr style="border:0.5px solid rgba(255,255,255,0.1)">
-    <p style="color:white; font-size:14px; margin-bottom:6px; text-align:center;">
-    <b>Data Science</b>
+    
+    <hr style="
+        border: none;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        margin: 18px 0 24px 0;
+    ">
+    
+    <!-- DATA SCIENCE -->
+    <div style="margin-bottom: 22px;">
+    
+    <p style="
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: 'Sora', sans-serif;
+    ">
+    Data Science
     </p>
-    <ul style="color:#fed7aa; font-size:13px; list-style:none; padding:0; margin:0 0 8px 0; text-align:center;">
-    <li>Dwi Cahyawati</li>
-    <li>Mutia Saniya Rahma</li>
-    </ul>
-    <p style="color:white; font-size:14px; margin-bottom:6px; text-align:center;">
-    <b>AI Engineer</b>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: 500;
+    ">
+    Dwi Cahyawati
     </p>
-    <ul style="color:#fed7aa; font-size:13px; list-style:none; padding:0; margin:0 0 8px 0; text-align:center;">
-    <li>Aliya Shahira</li>
-    <li>Khalisha Rana Putri</li>
-    </ul>
-    <p style="color:white; font-size:14px; margin-bottom:6px; text-align:center;">
-    <b>Full-Stack Web Dev</b>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: 500;
+    ">
+    Mutia Saniya Rahma
     </p>
-    <ul style="color:#fed7aa; font-size:13px; list-style:none; padding:0; margin:0; text-align:center;">
-    <li>Hamzah Hudzairah</li>
-    <li>Berton Adiwidya Wibowo</li>
-    </ul>
+    
+    </div>
+    
+    <!-- AI ENGINEER -->
+    <div style="margin-bottom: 22px;">
+    
+    <p style="
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: 'Sora', sans-serif;
+    ">
+    AI Engineer
+    </p>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: 500;
+    ">
+    Aliya Shahira
+    </p>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: 500;
+    ">
+    Khalisha Rana Putri
+    </p>
+    
+    </div>
+    
+    <!-- FULLSTACK -->
+    <div>
+    
+    <p style="
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: 'Sora', sans-serif;
+    ">
+    Full-Stack Web Dev
+    </p>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: 500;
+    ">
+    Hamzah Hudzairah
+    </p>
+    
+    <p style="
+        color: #FFF6DE;
+        font-size: 14px;
+        margin: 4px 0;
+        font-weight: 500;
+    ">
+    Berton Adiwidya Wibowo
+    </p>
+    
+    </div>
+    
     </div>
     """, unsafe_allow_html=True)
 
