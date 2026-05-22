@@ -802,7 +802,7 @@ user_features['spending_persona'] = user_features['cluster'].map(cluster_persona
 with st.sidebar:
     st.markdown(
         "<h2 style='text-align:center;font-family:Syne,sans-serif;font-weight:800;"
-        "font-size:1.7rem;color:#fff;margin-bottom:2px;'>💸 BUDU</h2>",
+        "font-size:1.7rem;color:#fff;margin-bottom:2px;'>BUDU</h2>",
         unsafe_allow_html=True
     )
     st.markdown(
