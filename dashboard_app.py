@@ -34,6 +34,7 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     
     /* ── Base typography ── */
     html, body, [class*="css"] {
@@ -43,7 +44,7 @@ st.markdown("""
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3 {
-        font-family: 'Syne', sans-serif !important;
+        font-family: 'Sora', sans-serif !important;
     }
 
     /* ── Page background ── */
@@ -70,8 +71,8 @@ st.markdown("""
 
     /* ── Sidebar BUDU brand ── */
     [data-testid="stSidebar"] .stMarkdown h2 {
-        font-family: 'Syne', sans-serif !important;
-        font-size: 1.6rem !important;
+        font-family: 'Sora', sans-serif !important;
+        font-size: 1.8rem !important;
         font-weight: 800 !important;
         letter-spacing: -0.5px;
         color: #fff !important;
@@ -97,9 +98,11 @@ st.markdown("""
         font-weight: 700;
         color: #9a3412;
         font-family: 'Inter', sans-serif;
-        font-size: 2.2rem;
-        letter-spacing: -0.5px;
-}
+        font-size: 2rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        white-space: nowrap;
+    }
     [data-testid="stMetricLabel"] {
         color: #92400e;
         font-weight: 600;
@@ -231,8 +234,9 @@ st.markdown("""
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 4px;
-        font-family: 'Space Grotesk', sans-serif;
-        line-height: 1.1;
+        font-family: 'Sora', sans-serif;
+        line-height: 1.15;
+        letter-spacing: -1px;
     }
     .header-banner p {
         color: #fed7aa;
