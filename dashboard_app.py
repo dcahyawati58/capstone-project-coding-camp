@@ -281,12 +281,7 @@ st.markdown("""
     
     /* ── Header Banner ── */
     .header-banner {
-        background: linear-gradient(
-            135deg,
-            #F48F68 0%,
-            #F7B7A3 55%,
-            #FFD6B8 100%
-        );
+        background: #F48F68;
         border-radius: 20px;
         padding: 30px 36px;
         margin-bottom: 24px;
