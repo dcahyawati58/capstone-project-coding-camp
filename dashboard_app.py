@@ -33,6 +33,7 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     
     /* ── Base typography ── */
     html, body, [class*="css"] {
@@ -230,7 +231,8 @@ st.markdown("""
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 4px;
-        font-family: 'Syne', sans-serif;
+        font-family: 'Space Grotesk', sans-serif;
+        line-height: 1.1;
     }
     .header-banner p {
         color: #fed7aa;
