@@ -56,7 +56,7 @@ st.markdown("""
     
     /* ── Sidebar ── */
     [data-testid="stSidebar"] {
-        background: #E89B7A;
+        background: #F48F68;
     }
     
     [data-testid="stSidebar"] .stRadio label {
