@@ -32,7 +32,8 @@ st.set_page_config(
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+    
     /* ── Base typography ── */
     html, body, [class*="css"] {
         font-family: 'DM Sans', sans-serif;
@@ -92,10 +93,12 @@ st.markdown("""
         box-shadow: 0 4px 20px rgba(234,88,12,0.15);
     }
     [data-testid="stMetricValue"] {
-        font-weight: 800;
+        font-weight: 700;
         color: #9a3412;
-        font-family: 'Syne', sans-serif;
-    }
+        font-family: 'Inter', sans-serif;
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+}
     [data-testid="stMetricLabel"] {
         color: #92400e;
         font-weight: 600;
