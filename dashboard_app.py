@@ -834,28 +834,28 @@ with st.sidebar:
         text-align: center;
     ">
     <h4 style="color:white; margin-bottom:6px; font-family:'Syne',sans-serif; text-align:center;">
-    👥 Tim CC26-PSU268
+    Tim CC26-PSU268
     </h4>
     <p style="color:#fed7aa; font-size:13px; margin-top:0; text-align:center;">
     Coding Camp 2026 · DBS Foundation
     </p>
     <hr style="border:0.5px solid rgba(255,255,255,0.1)">
     <p style="color:white; font-size:14px; margin-bottom:6px; text-align:center;">
-    <b>🧠 Data Science</b>
+    <b>Data Science</b>
     </p>
     <ul style="color:#fed7aa; font-size:13px; list-style:none; padding:0; margin:0 0 8px 0; text-align:center;">
     <li>Dwi Cahyawati</li>
     <li>Mutia Saniya Rahma</li>
     </ul>
     <p style="color:white; font-size:14px; margin-bottom:6px; text-align:center;">
-    <b>🤖 AI Engineer</b>
+    <b>AI Engineer</b>
     </p>
     <ul style="color:#fed7aa; font-size:13px; list-style:none; padding:0; margin:0 0 8px 0; text-align:center;">
     <li>Aliya Shahira</li>
     <li>Khalisha Rana Putri</li>
     </ul>
     <p style="color:white; font-size:14px; margin-bottom:6px; text-align:center;">
-    <b>💻 Full-Stack Web Dev</b>
+    <b>Full-Stack Web Dev</b>
     </p>
     <ul style="color:#fed7aa; font-size:13px; list-style:none; padding:0; margin:0; text-align:center;">
     <li>Hamzah Hudzairah</li>
